@@ -3,139 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mahesh Palacholla — Software Developer Trainee</title>
+  <title>Mahesh Palacholla — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=5" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Clean software-style background (no heavy blur) -->
-  <div class="bg">
-    <div class="radial"></div>
-    <div class="grid"></div>
-  </div>
-
   <div class="wrap">
-    <header class="hero card">
-      <img src="images/profile.jpg" alt="Mahesh Palacholla" class="avatar" />
-      <div class="hero-text">
-        <div class="tagline">Building reliable campus software & networks</div>
-        <h1>Mahesh Palacholla</h1>
-        <p class="subtitle">
-          <span class="pill">Software Developer Trainee @ CampX – Digital Campus Ecosystem</span> • Hyderabad
-        </p>
-        <div class="links">
-          <a class="btn" href="mailto:maheshcan2023@gmail.com">Email</a>
-          <a class="btn outline" href="tel:+919493712029">Call</a>
-          <a class="btn" href="Mahesh-Resume.pdf" download>Download Resume</a>
-        </div>
-      </div>
+    <header class="sitebar">
+      <div class="brand">Mahesh</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="details.html">Details</a>
+      </nav>
     </header>
 
-    <nav class="topnav">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <section id="about" class="card">
-      <h2>About</h2>
-      <p>
-        I’m a Software Developer Trainee at <strong>CampX – Digital Campus Ecosystem</strong>, contributing to features
-        and integrations used by colleges. I work across front-end (React), back-end APIs (Node/NestJS, REST/GraphQL),
-        and light DevOps—leveraging my network engineering background to design <em>stable, observable</em> systems.
-        Recent focus areas: React UI patterns, NestJS services, GraphQL, Frappe/ERPNext customizations, and data work
-        with MongoDB/Neo4j. I care about clean code, helpful docs, and shipping reliably.
-      </p>
-      <div class="badges">
-        <span>React</span><span>Node.js</span><span>NestJS</span><span>GraphQL</span>
-        <span>Frappe/ERPNext</span><span>MongoDB</span><span>Neo4j</span><span>Wireshark</span>
+    <section class="hero">
+      <img class="avatar" src="images/profile.jpg" alt="Mahesh Palacholla" />
+      <div>
+        <div class="sub">Building reliable campus software & networks</div>
+        <h1>Mahesh Palacholla</h1>
+        <span class="tag">Software Developer Trainee @ CampX – Digital Campus Ecosystem</span>
+        <div class="badgeRow">
+          <span class="badge">React</span><span class="badge">Node.js</span><span class="badge">NestJS</span>
+          <span class="badge">GraphQL</span><span class="badge">MongoDB</span><span class="badge">ERPNext</span>
+        </div>
+        <div class="cta" style="margin-top:14px">
+          <a class="btn" href="mailto:maheshcan2023@gmail.com">Email</a>
+          <a class="btn ghost" href="tel:+919493712029">Call</a>
+          <a class="btn" href="Mahesh-Resume.pdf" download>Download Resume</a>
+          <a class="btn ghost" href="details.html">View Details</a>
+        </div>
       </div>
-    </section>
-
-    <section id="skills" class="grid-auto">
-      <div class="card">
-        <h3>Development</h3>
-        <ul>
-          <li>Front-end: React (hooks), HTML/CSS/JS</li>
-          <li>Back-end: Node.js, NestJS, REST/GraphQL</li>
-          <li>Databases: MongoDB, Neo4j (Aura)</li>
-          <li>ERP: Frappe/ERPNext custom apps & print formats</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Networking</h3>
-        <ul>
-          <li>IPv4, subnetting, OSI & TCP/IP</li>
-          <li>Routing: Static, OSPF, BGP</li>
-          <li>Switching: VLAN, STP/RSTP, EtherChannel, HSRP</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Platforms & Tools</h3>
-        <ul>
-          <li>Cisco Catalyst/ASR, Juniper EX/MX</li>
-          <li>Wireshark, SolarWinds, Zabbix, ServiceNow</li>
-          <li>Palo Alto (overview)</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Ways I Work</h3>
-        <ul>
-          <li>Incident handling with clear RCA notes</li>
-          <li>Network/Service documentation & diagrams</li>
-          <li>Partner/vendor coordination</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="experience" class="card">
-      <h2>Experience</h2>
-
-      <div class="item">
-        <strong>Software Developer Trainee</strong> — CampX (Digital Campus Ecosystem)
-        <div class="muted">Nov 2025 – Present</div>
-        <ul>
-          <li>Build features for campus workflows (admissions, exams, finance) using React + Node/NestJS.</li>
-          <li>Create GraphQL/REST APIs; integrate with Frappe/ERPNext where needed.</li>
-          <li>Write clean code and docs; collaborate across product, QA, and infra.</li>
-        </ul>
-      </div>
-
-      <div class="item">
-        <strong>Assistant Network Engineer</strong> — Hadaf Al Khaleej Commercial Services LLC (Etisalat – ISP)
-        <div class="muted">Dec 2020 – Dec 2023</div>
-        <ul>
-          <li>Configured routers/switches; executed on-site cabling and rack setups for enterprise sites.</li>
-          <li>Monitored network performance; resolved routing & switching incidents to restore SLAs.</li>
-          <li>Co-ordinated with vendors; authored SOPs and knowledge base articles.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="education" class="card">
-      <h2>Education</h2>
-      <div class="item">
-        <strong>M.Sc. Information Technology</strong> — William Carey University, Meghalaya
-      </div>
-    </section>
-
-    <section id="contact" class="card">
-      <h2>Contact</h2>
-      <p>
-        <strong>Phone:</strong> <a href="tel:+919493712029">+91 94937 12029</a> •
-        <strong>Email:</strong> <a href="mailto:maheshcan2023@gmail.com">maheshcan2023@gmail.com</a> •
-        <strong>Location:</strong> Hyderabad
-      </p>
     </section>
 
     <footer class="foot">© <span id="year"></span> Mahesh Palacholla</footer>
   </div>
-
-  <script src="script.js?v=5"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
+
 
