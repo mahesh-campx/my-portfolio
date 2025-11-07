@@ -1,30 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahesh Palacholla — Portfolio</title>
+
+  <!-- ✅ MUST match your file name exactly: styles.css -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Load JS after HTML parses -->
+  <script src="script.js" defer></script>
+</head>
 <body>
 
-<nav>
-  <a href="index.html" class="active">Home</a>
-  <a href="details.html">Details</a>
-  <a href="#" id="contactBtn">Contact</a>
-</nav>
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="details.html">Details</a>
+    <!-- Contact only shows info on this page -->
+    <a href="#contact" id="contactBtn">Contact</a>
+  </nav>
 
-<div class="wrap">
-  <div class="hero">
-      <img src="images/profile.jpg" alt="Mahesh Profile">
-
+  <!-- HERO (centered) -->
+  <div class="wrap">
+    <section class="hero">
+      <!-- class is optional; CSS already targets .hero img -->
+      <img src="images/profile.jpg" alt="Mahesh Profile" />
       <h1>Mahesh Palacholla</h1>
       <h2>Software Developer Trainee @ CampX – Digital Campus Ecosystem</h2>
+    </section>
+
+    <!-- Contact line (hidden by default) -->
+    <div id="contactBox" class="contact-inline" style="display:none;">
+      <strong>Phone:</strong>
+      <a href="tel:+919493712029">+91 94937 12029</a>
+      &nbsp;•&nbsp;
+      <strong>Email:</strong>
+      <a href="mailto:maheshcan2023@gmail.com">maheshcan2023@gmail.com</a>
+    </div>
   </div>
 
-  <!-- ✅ CONTACT INFO (Hidden by default) -->
-  <div id="contactBox" style="display: none;">
-      <p><strong>📞 Phone:</strong> +91 94937 12029</p>
-      <p><strong>📧 Email:</strong> maheshcan2023@gmail.com</p>
-  </div>
-</div>
-
-<footer>© 2025 Mahesh Palacholla</footer>
-
-<script src="script.js"></script>
+  <footer>© 2025 Mahesh Palacholla</footer>
 </body>
 </html>
+
 
 

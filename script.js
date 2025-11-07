@@ -1,13 +1,21 @@
-// ✅ Show contact info on Home page when Contact is clicked
+// Show contact info on Home when "Contact" is clicked
 document.addEventListener("DOMContentLoaded", () => {
-    const contactBtn = document.getElementById("contactBtn");
-    const contactBox = document.getElementById("contactBox");
+  const btn = document.getElementById("contactBtn");
+  const box = document.getElementById("contactBox");
 
-    if (contactBtn && contactBox) {
-        contactBtn.addEventListener("click", () => {
-            contactBox.style.display = "block";     // show
-            window.scrollTo({ top: window.innerHeight / 1.5, behavior: "smooth" });
-        });
-    }
+  if (!btn || !box) return;
+
+  btn.addEventListener("click", (e) => {
+    // prevent jumping to top or reloading
+    e.preventDefault();
+    box.style.display = "block";
+    box.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  // If URL already has #contact, reveal on load
+  if (location.hash === "#contact") {
+    box.style.display = "block";
+  }
 });
+
 
