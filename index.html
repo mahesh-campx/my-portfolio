@@ -12,8 +12,8 @@
   <nav>
     <a href="index.html" class="active">Home</a>
     <a href="details.html">Details</a>
-    <!-- Contact is NOT a separate page — it simply brings you to Home -->
-    <a href="index.html">Contact</a>
+    <!-- Contact goes to the contact card on this page -->
+    <a href="#contact">Contact</a>
   </nav>
 
   <!-- Centered hero -->
@@ -23,10 +23,27 @@
       <h1>Mahesh Palacholla</h1>
       <h2>Software Developer Trainee @ CampX – Digital Campus Ecosystem</h2>
     </div>
+
+    <!-- Small contact card -->
+    <section id="contact" class="contact-card">
+      <h3>Contact</h3>
+      <p>
+        <strong>Phone:</strong>
+        <a href="tel:+919493712029">+91 94937 12029</a><br>
+        <strong>Email:</strong>
+        <a href="mailto:maheshcan2023@gmail.com">maheshcan2023@gmail.com</a>
+      </p>
+    </section>
   </div>
 
   <!-- Footer -->
   <footer class="foot">© 2025 Mahesh Palacholla</footer>
+
+  <script>
+    // Smoothly scroll to contact if hash is present on load
+    if (location.hash === '#contact') {
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  </script>
 </body>
 </html>
-
