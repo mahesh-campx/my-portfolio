@@ -3,10 +3,10 @@
 =================================*/
 * { box-sizing: border-box; margin: 0; padding: 0; }
 :root{
-  --bg:#f6f7f9;
-  --text:#0f172a;
-  --muted:#64748b;
-  --accent:#0a84ff;           /* Apple blue */
+  --bg:#c4c6cb;
+  --text:#114ddb;
+  --muted:#373a3f;
+  --accent:#0a99ff;           /* Apple blue */
   --accent-ghost:#e7f1ff;
   --card:#ffffff;
   --ring:#e9eef6;
@@ -61,15 +61,15 @@ nav a.active{ background:var(--accent-ghost); color:var(--accent); }
   text-align:center;
 }
 .hero img{
-  width:clamp(120px, 18vw, 160px);
-  height:clamp(120px, 18vw, 160px);
+  width:clamp(130px, 22vw, 180px);
+  height:clamp(130px, 22vw, 180px);
   border-radius:50%; object-fit:cover;
   border:5px solid var(--accent);
   box-shadow:var(--shadow);
 }
 /* ✅ New gradient color for your name */
 .hero h1{
-  font-size:clamp(34px, 6vw, 56px);
+  font-size:clamp(37px, 7vw, 58px);
   font-weight:800;
   margin-top:18px;
   background: linear-gradient(90deg, #0a84ff 0%, #7b61ff 60%, #9a77ff 100%);
