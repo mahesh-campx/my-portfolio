@@ -1,56 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mahesh Palacholla — Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="details.html">Details</a>
-    <!-- Contact just reveals the inline info below (handled by JS) -->
-    <a href="#contact" id="contactLink">Contact</a>
-  </nav>
+<nav>
+  <a href="index.html" class="active">Home</a>
+  <a href="details.html">Details</a>
+  <a href="#" id="contactBtn">Contact</a>
+</nav>
 
-  <!-- Inline contact line (hidden at first) -->
-  <div id="contact" class="contact-inline" style="display:none;">
-    <strong>Phone:</strong> <a href="tel:+919493712029">+91 94937 12029</a> &nbsp;•&nbsp;
-    <strong>Email:</strong> <a href="mailto:maheshcan2023@gmail.com">maheshcan2023@gmail.com</a>
-  </div>
+<div class="wrap">
+  <div class="hero">
+      <img src="images/profile.jpg" alt="Mahesh Profile">
 
-  <!-- HERO -->
-  <div class="wrap">
-    <section class="hero">
-      <img src="images/profile.jpg" alt="Mahesh Profile" />
       <h1>Mahesh Palacholla</h1>
       <h2>Software Developer Trainee @ CampX – Digital Campus Ecosystem</h2>
-    </section>
   </div>
 
-  <footer>© 2025 Mahesh Palacholla</footer>
+  <!-- ✅ CONTACT INFO (Hidden by default) -->
+  <div id="contactBox" style="display: none;">
+      <p><strong>📞 Phone:</strong> +91 94937 12029</p>
+      <p><strong>📧 Email:</strong> maheshcan2023@gmail.com</p>
+  </div>
+</div>
 
-  <script>
-    // Toggle the small contact line when Contact is clicked
-    const link = document.getElementById('contactLink');
-    const bar = document.getElementById('contact');
-    link.addEventListener('click', (e) => {
-      // allow hash jump but ensure it becomes visible
-      if (bar.style.display === 'none') {
-        bar.style.display = 'block';
-      } else {
-        // optional: keep it visible instead of hiding again
-        bar.style.display = 'block';
-      }
-      // Smooth focus into view
-      setTimeout(() => bar.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
-    });
-    // If user loads with #contact in URL, show it
-    if (location.hash === '#contact') { bar.style.display = 'block'; }
-  </script>
+<footer>© 2025 Mahesh Palacholla</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
+
 

@@ -3,7 +3,7 @@
 =================================*/
 * { box-sizing: border-box; margin: 0; padding: 0; }
 :root{
-  --bg:#c4c6cb;
+  --bg:#e9ebf1;
   --text:#114ddb;
   --muted:#373a3f;
   --accent:#0a99ff;           /* Apple blue */
