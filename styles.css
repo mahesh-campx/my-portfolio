@@ -1,158 +1,92 @@
-/* -------------------------------------------------------
-   GLOBAL STYLES + THEME VARIABLES
-------------------------------------------------------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ===============================
+   THEME
+=================================*/
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root{
+  --bg:#f6f7f9;
+  --text:#0f172a;
+  --muted:#64748b;
+  --accent:#0a84ff;           /* Apple blue */
+  --accent-ghost:#e7f1ff;
+  --card:#ffffff;
+  --ring:#e9eef6;
+  --radius:18px;
+  --shadow:0 10px 30px rgba(15,23,42,.08);
+  --nav-h:70px;
+}
+html{ scroll-behavior:smooth; }
+body{
+  min-height:100vh; background:var(--bg); color:var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  display:flex; flex-direction:column; align-items:center;
 }
 
-:root {
-  --bg: #f6f6f7;
-  --text: #111;
-  --accent: #0071e3;          /* Apple blue color */
-  --accent-light: #e5f1ff;
-  --card-bg: #ffffff;
-  --radius: 18px;
-  --shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
-  --nav-height: 70px;
-  scroll-behavior: smooth;
+/* ===============================
+   NAV
+=================================*/
+nav{
+  position:fixed; top:0; left:0; right:0; height:var(--nav-h);
+  display:flex; align-items:center; gap:14px;
+  padding:0 22px; background:rgba(255,255,255,.7);
+  backdrop-filter: blur(16px);
+  border-bottom:1px solid var(--ring);
+  z-index:10;
+}
+nav a{
+  text-decoration:none; color:var(--text);
+  padding:8px 14px; border-radius:10px; font-weight:600;
+}
+nav a:hover{ background:var(--accent-ghost); color:var(--accent); }
+nav a.active{ background:var(--accent-ghost); color:var(--accent); }
+
+/* Small contact line under the navbar (Home) */
+.contact-inline{
+  width:100%; text-align:center; margin-top:var(--nav-h);
+  padding:8px 10px; font-size:16px; color:var(--muted);
+}
+.contact-inline a{ color:var(--accent); text-decoration:none; font-weight:600; }
+.contact-inline a:hover{ text-decoration:underline; }
+
+/* ===============================
+   HOME HERO
+=================================*/
+.wrap{ width:100%; max-width:1100px; padding:24px; margin-top:24px; }
+.hero{
+  margin:60px auto 0; text-align:center;
+}
+.hero img{
+  width:160px; height:160px; border-radius:50%; object-fit:cover;
+  border:5px solid var(--accent);
+  box-shadow:var(--shadow);
+}
+.hero h1{ font-size:48px; font-weight:800; margin-top:18px; }
+.hero h2{ font-size:18px; color:var(--muted); margin-top:8px; font-weight:500; }
+
+/* ===============================
+   CARDS (Details page)
+=================================*/
+.container{ width:100%; max-width:1100px; padding:calc(var(--nav-h)+26px) 24px 40px; }
+.page-title{ font-size:32px; margin-bottom:12px; }
+.card{
+  background:var(--card); border:1px solid var(--ring); border-radius:var(--radius);
+  box-shadow:var(--shadow); padding:22px 22px; margin-top:16px;
+}
+.card h2{ font-size:22px; margin-bottom:10px; }
+.card h3{ font-size:18px; margin:10px 0 6px; }
+.card p{ color:var(--text); line-height:1.6; }
+.muted{ color:var(--muted); }
+ul{ margin-left:18px; line-height:1.6; }
+
+/* Tech badges */
+.badges{ margin-top:10px; display:flex; gap:8px; flex-wrap:wrap; }
+.badges span{
+  background:var(--accent-ghost); color:var(--accent);
+  padding:6px 10px; border-radius:999px; font-size:13px; font-weight:700;
 }
 
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-}
-
-/* -------------------------------------------------------
-   NAVBAR
-------------------------------------------------------- */
-nav {
-  width: 100%;
-  height: var(--nav-height);
-  background: var(--bg);
-  display: flex;
-  align-items: center;
-  padding: 0 30px;
-  gap: 20px;
-  font-size: 19px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  position: fixed;
-  top: 0;
-  z-index: 20;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--text);
-  padding: 8px 14px;
-  border-radius: 8px;
-  transition: 0.25s;
-}
-
-nav a:hover {
-  background: var(--accent-light);
-  color: var(--accent);
-}
-
-nav .active {
-  background: var(--accent-light);
-  color: var(--accent);
-  font-weight: 600;
-}
-
-/* -------------------------------------------------------
-   HERO SECTION (CENTER)
-------------------------------------------------------- */
-.wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: calc(var(--nav-height) + 40px);
-}
-
-.hero {
-  text-align: center;
-  margin-top: 60px;
-}
-
-.hero img {
-  width: 155px;
-  height: 155px;
-  border-radius: 100%;
-  object-fit: cover;
-  border: 5px solid var(--accent);
-  box-shadow: var(--shadow);
-}
-
-.hero h1 {
-  font-size: 48px;
-  font-weight: 700;
-  margin-top: 20px;
-}
-
-.hero h2 {
-  font-size: 20px;
-  margin-top: 8px;
-  font-weight: 500;
-  opacity: 0.7;
-}
-
-/* -------------------------------------------------------
-   CONTACT CARD (HOME PAGE POPUP BOX)
-------------------------------------------------------- */
-.contact-card {
-  width: 100%;
-  max-width: 410px;
-  margin-top: 28px;
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  padding: 20px 25px;
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  text-align: center;
-}
-
-.contact-card h3 {
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-.contact-card p {
-  line-height: 1.6;
-  font-size: 18px;
-}
-
-.contact-card a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.contact-card a:hover {
-  text-decoration: underline;
-}
-
-/* Prevent the contact card from hiding under navbar */
-#contact {
-  scroll-margin-top: 100px;
-}
-
-/* -------------------------------------------------------
+/* ===============================
    FOOTER
-------------------------------------------------------- */
-footer {
-  text-align: center;
-  width: 100%;
-  padding: 40px 0;
-  font-size: 15px;
-  margin-top: auto;
-  opacity: 0.6;
-}
+=================================*/
+footer{ width:100%; text-align:center; padding:36px 0; margin-top:auto; color:var(--muted); font-size:14px; }
 
 

@@ -8,35 +8,34 @@
 </head>
 <body>
 
-  <!-- Top-left nav -->
+  <!-- NAV -->
   <nav>
     <a href="index.html">Home</a>
     <a href="details.html" class="active">Details</a>
-    <!-- Contact still routes to Home -->
-    <a href="index.html">Contact</a>
+    <a href="index.html#contact" id="contactTop">Contact</a>
   </nav>
 
-  <div class="container">
-    <h1>Profile Details</h1>
+  <main class="container">
+    <h1 class="page-title">Profile Details</h1>
 
-    <!-- About -->
-    <div class="card">
-      <h2>About</h2>
+    <!-- Bio -->
+    <section class="card">
+      <h2>Bio</h2>
       <p>
-        I am a Software Developer Trainee at <strong>CampX – Digital Campus Ecosystem</strong>, working on products used by colleges.
-        I build responsive front-end apps with <strong>React</strong> and scalable back-end services using
-        <strong>Node.js / NestJS</strong>. I integrate <strong>REST</strong> and <strong>GraphQL</strong> APIs,
-        customize <strong>Frappe/ERPNext</strong>, and work with <strong>MongoDB</strong> and <strong>Neo4j</strong>.
-        My focus is clean code, helpful docs, and stable releases.
+        I’m a Software Developer Trainee at <strong>CampX – Digital Campus Ecosystem</strong>, building
+        features for real-world campus products. I develop responsive UIs with <strong>React</strong> and
+        scalable APIs using <strong>Node.js/NestJS</strong>, integrate <strong>REST</strong> and
+        <strong>GraphQL</strong>, and customize <strong>Frappe/ERPNext</strong>. I value clean code,
+        helpful documentation, and stable releases; and I’m growing into a full-stack product engineer.
       </p>
       <div class="badges">
         <span>React</span><span>Node.js</span><span>NestJS</span>
         <span>GraphQL</span><span>ERPNext</span><span>MongoDB</span><span>Neo4j</span>
       </div>
-    </div>
+    </section>
 
     <!-- Skills -->
-    <div class="card">
+    <section class="card">
       <h2>Skills</h2>
       <ul>
         <li><strong>Front-end:</strong> React (hooks), modern HTML/CSS/JS</li>
@@ -46,38 +45,46 @@
         <li><strong>Networking (bg):</strong> IPv4, OSPF/BGP, VLAN, STP/RSTP, EtherChannel, HSRP</li>
         <li><strong>Tools:</strong> Wireshark, SolarWinds, Zabbix, ServiceNow</li>
       </ul>
-    </div>
+    </section>
 
     <!-- Experience -->
-    <div class="card">
+    <section class="card">
       <h2>Experience</h2>
 
       <h3>Software Developer Trainee — CampX (Digital Campus Ecosystem)</h3>
       <div class="muted">Nov 2025 – Present</div>
       <ul>
-        <li>Build features for campus workflows (admissions, exams, finance) with React + Node/NestJS.</li>
+        <li>Build campus workflow features (admissions, exams, finance) with React + Node/NestJS.</li>
         <li>Design & integrate REST/GraphQL APIs; customize Frappe/ERPNext.</li>
-        <li>Write documentation; collaborate with product, QA, and infra.</li>
+        <li>Write docs; collaborate with product, QA, and infra to ship stable releases.</li>
       </ul>
 
-      <h3 style="margin-top:14px;">Assistant Network Engineer — Hadaf Al Khaleej (Etisalat – ISP)</h3>
+      <h3 style="margin-top:12px;">Assistant Network Engineer — Hadaf Al Khaleej (Etisalat – ISP)</h3>
       <div class="muted">Dec 2020 – Dec 2023</div>
       <ul>
         <li>Configured routers/switches; cabling & rack setups for enterprise sites.</li>
         <li>Monitored networks; resolved routing/switching incidents and restored SLAs.</li>
-        <li>Vendor coordination and documentation (SOPs, KBs).</li>
+        <li>Vendor coordination and documentation (SOPs, knowledge base).</li>
       </ul>
-    </div>
+    </section>
 
     <!-- Education -->
-    <div class="card">
+    <section class="card">
       <h2>Education</h2>
       <h3>M.Sc. Information Technology</h3>
       <div class="muted">William Carey University, Meghalaya</div>
-    </div>
-  </div>
+    </section>
+  </main>
 
-  <footer class="foot">© 2025 Mahesh Palacholla</footer>
+  <footer>© 2025 Mahesh Palacholla</footer>
+
+  <script>
+    // Make the Contact in the details page jump to the Home contact line
+    document.getElementById('contactTop').addEventListener('click', (e)=>{
+      // allow navigation; page change will handle reveal
+    });
+  </script>
 </body>
 </html>
+
 
