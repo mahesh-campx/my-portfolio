@@ -39,7 +39,7 @@ nav a{
 nav a:hover{ background:var(--accent-ghost); color:var(--accent); }
 nav a.active{ background:var(--accent-ghost); color:var(--accent); }
 
-/* Small contact line under the navbar (Home) */
+/* A thin inline contact bar under navbar (Home) */
 .contact-inline{
   width:100%; text-align:center; margin-top:var(--nav-h);
   padding:8px 10px; font-size:16px; color:var(--muted);
@@ -48,28 +48,55 @@ nav a.active{ background:var(--accent-ghost); color:var(--accent); }
 .contact-inline a:hover{ text-decoration:underline; }
 
 /* ===============================
-   HOME HERO
+   HOME HERO  — perfectly centered on all screens
 =================================*/
-.wrap{ width:100%; max-width:1100px; padding:24px; margin-top:24px; }
+.wrap{
+  width:100%; max-width:1100px; padding:0 24px;
+  /* Center vertically: viewport minus navbar & some breathing room */
+  min-height:calc(100vh - var(--nav-h) - 140px);
+  display:flex; flex-direction:column; justify-content:center; align-items:center;
+  margin-top:calc(var(--nav-h) + 8px);
+}
 .hero{
-  margin:60px auto 0; text-align:center;
+  text-align:center;
 }
 .hero img{
-  width:160px; height:160px; border-radius:50%; object-fit:cover;
+  width:clamp(120px, 18vw, 160px);
+  height:clamp(120px, 18vw, 160px);
+  border-radius:50%; object-fit:cover;
   border:5px solid var(--accent);
   box-shadow:var(--shadow);
 }
-.hero h1{ font-size:48px; font-weight:800; margin-top:18px; }
-.hero h2{ font-size:18px; color:var(--muted); margin-top:8px; font-weight:500; }
+/* ✅ New gradient color for your name */
+.hero h1{
+  font-size:clamp(34px, 6vw, 56px);
+  font-weight:800;
+  margin-top:18px;
+  background: linear-gradient(90deg, #0a84ff 0%, #7b61ff 60%, #9a77ff 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.hero h2{
+  font-size:clamp(16px, 2.2vw, 20px);
+  color:var(--muted);
+  margin-top:8px; font-weight:500;
+}
 
 /* ===============================
-   CARDS (Details page)
+   DETAILS PAGE (cards)
 =================================*/
-.container{ width:100%; max-width:1100px; padding:calc(var(--nav-h)+26px) 24px 40px; }
+.container{
+  width:100%; max-width:1100px;
+  padding:calc(var(--nav-h) + 40px) 24px 40px;
+}
+/* ✅ Extra top margin for the first (Bio) card */
+.container .card:first-of-type{
+  margin-top:28px;
+}
 .page-title{ font-size:32px; margin-bottom:12px; }
+
 .card{
   background:var(--card); border:1px solid var(--ring); border-radius:var(--radius);
-  box-shadow:var(--shadow); padding:22px 22px; margin-top:16px;
+  box-shadow:var(--shadow); padding:22px; margin-top:16px;
 }
 .card h2{ font-size:22px; margin-bottom:10px; }
 .card h3{ font-size:18px; margin:10px 0 6px; }
@@ -87,6 +114,18 @@ ul{ margin-left:18px; line-height:1.6; }
 /* ===============================
    FOOTER
 =================================*/
-footer{ width:100%; text-align:center; padding:36px 0; margin-top:auto; color:var(--muted); font-size:14px; }
+footer{
+  width:100%; text-align:center; padding:36px 0; margin-top:auto;
+  color:var(--muted); font-size:14px;
+}
+
+/* ===============================
+   RESPONSIVE TWEAKS
+=================================*/
+@media (max-width: 600px){
+  nav{ gap:10px; padding:0 14px; }
+  .container{ padding-left:16px; padding-right:16px; }
+}
+
 
 
