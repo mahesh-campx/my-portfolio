@@ -1,13 +1,13 @@
-// year in footer
+// current year
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// smooth scroll for in-page nav links
+// smooth scroll for in-page links
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
-    const id = a.getAttribute('href');
-    const el = document.querySelector(id);
+    const el = document.querySelector(a.getAttribute('href'));
     if (!el) return;
     e.preventDefault();
     el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
+

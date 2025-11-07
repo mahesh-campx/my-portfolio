@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mahesh Palacholla – Portfolio</title>
+  <title>Mahesh Palacholla — Software Developer Trainee</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=5" />
 </head>
 <body>
-  <!-- Software-style background (animated mesh + subtle engineering grid) -->
+  <!-- Clean software-style background (no heavy blur) -->
   <div class="bg">
-    <div class="mesh"></div>
+    <div class="radial"></div>
     <div class="grid"></div>
   </div>
 
@@ -20,8 +20,11 @@
     <header class="hero card">
       <img src="images/profile.jpg" alt="Mahesh Palacholla" class="avatar" />
       <div class="hero-text">
+        <div class="tagline">Building reliable campus software & networks</div>
         <h1>Mahesh Palacholla</h1>
-        <p class="subtitle"><span class="pill">Network Engineer</span> • Hyderabad</p>
+        <p class="subtitle">
+          <span class="pill">Software Developer Trainee @ CampX – Digital Campus Ecosystem</span> • Hyderabad
+        </p>
         <div class="links">
           <a class="btn" href="mailto:maheshcan2023@gmail.com">Email</a>
           <a class="btn outline" href="tel:+919493712029">Call</a>
@@ -41,12 +44,28 @@
     <section id="about" class="card">
       <h2>About</h2>
       <p>
-        Network Engineer with experience across LAN/WAN, routing (OSPF/BGP), switching (VLAN/STP), monitoring,
-        and incident resolution. Comfortable with Cisco/Juniper environments and documentation.
+        I’m a Software Developer Trainee at <strong>CampX – Digital Campus Ecosystem</strong>, contributing to features
+        and integrations used by colleges. I work across front-end (React), back-end APIs (Node/NestJS, REST/GraphQL),
+        and light DevOps—leveraging my network engineering background to design <em>stable, observable</em> systems.
+        Recent focus areas: React UI patterns, NestJS services, GraphQL, Frappe/ERPNext customizations, and data work
+        with MongoDB/Neo4j. I care about clean code, helpful docs, and shipping reliably.
       </p>
+      <div class="badges">
+        <span>React</span><span>Node.js</span><span>NestJS</span><span>GraphQL</span>
+        <span>Frappe/ERPNext</span><span>MongoDB</span><span>Neo4j</span><span>Wireshark</span>
+      </div>
     </section>
 
-    <section id="skills" class="grid-2">
+    <section id="skills" class="grid-auto">
+      <div class="card">
+        <h3>Development</h3>
+        <ul>
+          <li>Front-end: React (hooks), HTML/CSS/JS</li>
+          <li>Back-end: Node.js, NestJS, REST/GraphQL</li>
+          <li>Databases: MongoDB, Neo4j (Aura)</li>
+          <li>ERP: Frappe/ERPNext custom apps & print formats</li>
+        </ul>
+      </div>
       <div class="card">
         <h3>Networking</h3>
         <ul>
@@ -56,38 +75,43 @@
         </ul>
       </div>
       <div class="card">
-        <h3>Tools</h3>
+        <h3>Platforms & Tools</h3>
         <ul>
-          <li>Wireshark, SolarWinds, Zabbix</li>
-          <li>ServiceNow</li>
+          <li>Cisco Catalyst/ASR, Juniper EX/MX</li>
+          <li>Wireshark, SolarWinds, Zabbix, ServiceNow</li>
           <li>Palo Alto (overview)</li>
         </ul>
       </div>
       <div class="card">
-        <h3>Platforms</h3>
+        <h3>Ways I Work</h3>
         <ul>
-          <li>Cisco Catalyst/ASR</li>
-          <li>Juniper EX/MX</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Soft Skills</h3>
-        <ul>
-          <li>Troubleshooting & incident handling</li>
-          <li>Documentation & teamwork</li>
+          <li>Incident handling with clear RCA notes</li>
+          <li>Network/Service documentation & diagrams</li>
+          <li>Partner/vendor coordination</li>
         </ul>
       </div>
     </section>
 
     <section id="experience" class="card">
       <h2>Experience</h2>
+
+      <div class="item">
+        <strong>Software Developer Trainee</strong> — CampX (Digital Campus Ecosystem)
+        <div class="muted">Nov 2025 – Present</div>
+        <ul>
+          <li>Build features for campus workflows (admissions, exams, finance) using React + Node/NestJS.</li>
+          <li>Create GraphQL/REST APIs; integrate with Frappe/ERPNext where needed.</li>
+          <li>Write clean code and docs; collaborate across product, QA, and infra.</li>
+        </ul>
+      </div>
+
       <div class="item">
         <strong>Assistant Network Engineer</strong> — Hadaf Al Khaleej Commercial Services LLC (Etisalat – ISP)
         <div class="muted">Dec 2020 – Dec 2023</div>
         <ul>
-          <li>Configured routers/switches, cabling, and rack setups for enterprise sites.</li>
-          <li>Monitored performance and resolved routing/switching incidents.</li>
-          <li>Vendor coordination and documentation.</li>
+          <li>Configured routers/switches; executed on-site cabling and rack setups for enterprise sites.</li>
+          <li>Monitored network performance; resolved routing & switching incidents to restore SLAs.</li>
+          <li>Co-ordinated with vendors; authored SOPs and knowledge base articles.</li>
         </ul>
       </div>
     </section>
@@ -111,7 +135,7 @@
     <footer class="foot">© <span id="year"></span> Mahesh Palacholla</footer>
   </div>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>
 
