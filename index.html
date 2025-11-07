@@ -4,21 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mahesh Palacholla – Portfolio</title>
-  <link rel="stylesheet" href="style.css?v=2" />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
 <body>
+  <!-- Software-style background (animated mesh + subtle engineering grid) -->
+  <div class="bg">
+    <div class="mesh"></div>
+    <div class="grid"></div>
+  </div>
+
   <div class="wrap">
-    <header class="hero">
+    <header class="hero card">
       <img src="images/profile.jpg" alt="Mahesh Palacholla" class="avatar" />
-        <a class="chip" href="Mahesh-Resume.pdf" download>Download Resume</a>
-      <div>
+      <div class="hero-text">
         <h1>Mahesh Palacholla</h1>
-        <p class="subtitle">Network Engineer • Hyderabad</p>
+        <p class="subtitle"><span class="pill">Network Engineer</span> • Hyderabad</p>
         <div class="links">
-          <a class="chip" href="mailto:maheshcan2023@gmail.com">Email</a>
-          <a class="chip" href="tel:+919493712029">Call</a>
-          <a class="chip" href="Mahesh-Resume.pdf" download>Download Resume</a>
+          <a class="btn" href="mailto:maheshcan2023@gmail.com">Email</a>
+          <a class="btn outline" href="tel:+919493712029">Call</a>
+          <a class="btn" href="Mahesh-Resume.pdf" download>Download Resume</a>
         </div>
       </div>
     </header>
@@ -33,26 +40,42 @@
 
     <section id="about" class="card">
       <h2>About</h2>
-      <p>Network Engineer with experience across LAN/WAN, routing (OSPF/BGP), switching (VLAN/STP),
-      monitoring, and incident resolution. Comfortable with Cisco/Juniper environments and documentation.</p>
+      <p>
+        Network Engineer with experience across LAN/WAN, routing (OSPF/BGP), switching (VLAN/STP), monitoring,
+        and incident resolution. Comfortable with Cisco/Juniper environments and documentation.
+      </p>
     </section>
 
-    <section id="skills" class="card grid">
-      <div class="item">
+    <section id="skills" class="grid-2">
+      <div class="card">
         <h3>Networking</h3>
-        <ul><li>IPv4, subnetting, OSI & TCP/IP</li><li>Routing: Static, OSPF, BGP</li><li>Switching: VLAN, STP/RSTP, EtherChannel, HSRP</li></ul>
+        <ul>
+          <li>IPv4, subnetting, OSI & TCP/IP</li>
+          <li>Routing: Static, OSPF, BGP</li>
+          <li>Switching: VLAN, STP/RSTP, EtherChannel, HSRP</li>
+        </ul>
       </div>
-      <div class="item">
+      <div class="card">
         <h3>Tools</h3>
-        <ul><li>Wireshark, SolarWinds, Zabbix</li><li>ServiceNow</li><li>Palo Alto (overview)</li></ul>
+        <ul>
+          <li>Wireshark, SolarWinds, Zabbix</li>
+          <li>ServiceNow</li>
+          <li>Palo Alto (overview)</li>
+        </ul>
       </div>
-      <div class="item">
+      <div class="card">
         <h3>Platforms</h3>
-        <ul><li>Cisco Catalyst/ASR</li><li>Juniper EX/MX</li></ul>
+        <ul>
+          <li>Cisco Catalyst/ASR</li>
+          <li>Juniper EX/MX</li>
+        </ul>
       </div>
-      <div class="item">
+      <div class="card">
         <h3>Soft Skills</h3>
-        <ul><li>Troubleshooting & incident handling</li><li>Documentation & teamwork</li></ul>
+        <ul>
+          <li>Troubleshooting & incident handling</li>
+          <li>Documentation & teamwork</li>
+        </ul>
       </div>
     </section>
 
@@ -62,8 +85,8 @@
         <strong>Assistant Network Engineer</strong> — Hadaf Al Khaleej Commercial Services LLC (Etisalat – ISP)
         <div class="muted">Dec 2020 – Dec 2023</div>
         <ul>
-          <li>Configured routers/switches, cabling, rack setups for enterprise sites.</li>
-          <li>Monitored networks, resolved routing/switching issues, and handled incidents.</li>
+          <li>Configured routers/switches, cabling, and rack setups for enterprise sites.</li>
+          <li>Monitored performance and resolved routing/switching incidents.</li>
           <li>Vendor coordination and documentation.</li>
         </ul>
       </div>
@@ -71,19 +94,24 @@
 
     <section id="education" class="card">
       <h2>Education</h2>
-      <div class="item"><strong>M.Sc. Information Technology</strong> — William Carey University, Meghalaya</div>
+      <div class="item">
+        <strong>M.Sc. Information Technology</strong> — William Carey University, Meghalaya
+      </div>
     </section>
 
     <section id="contact" class="card">
       <h2>Contact</h2>
-      <p><strong>Phone:</strong> <a href="tel:+919493712029">+91 94937 12029</a> •
-         <strong>Email:</strong> <a href="mailto:maheshcan2023@gmail.com">maheshcan2023@gmail.com</a> •
-         <strong>Location:</strong> Hyderabad</p>
+      <p>
+        <strong>Phone:</strong> <a href="tel:+919493712029">+91 94937 12029</a> •
+        <strong>Email:</strong> <a href="mailto:maheshcan2023@gmail.com">maheshcan2023@gmail.com</a> •
+        <strong>Location:</strong> Hyderabad
+      </p>
     </section>
 
-   <footer class="foot">© <span id="year"></span> Mahesh Palacholla</footer>
-</div>
+    <footer class="foot">© <span id="year"></span> Mahesh Palacholla</footer>
+  </div>
 
-<script src="script.js?v=2"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
+

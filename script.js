@@ -1,4 +1,4 @@
-// set current year in footer
+// year in footer
 document.getElementById("year").textContent = new Date().getFullYear();
 
 // smooth scroll for in-page nav links
