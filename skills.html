@@ -2,56 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Skills — Mahesh Palacholla</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="wrap">
-    <header class="sitebar">
-      <div class="brand">Mahesh</div>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="skills.html">Skills</a>
-        <a href="experience.html">Experience</a>
-        <a href="education.html">Education</a>
-        <a href="details.html">Details</a>
-      </nav>
-    </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="details.html">Details</a>
+    <a href="skills.html" class="active">Skills</a>
+    <a href="experience.html">Experience</a>
+    <a href="education.html">Education</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-    <section class="pagehead">
-      <h1>Skills</h1>
-      <div class="muted">Technologies I work with</div>
-    </section>
+  <div class="container">
+    <h1>Skills</h1>
 
-    <div class="grid">
-      <div class="card">
-        <h2>Development</h2>
-        <ul>
-          <li>React (hooks), modern HTML/CSS/JS</li>
-          <li>Node.js, NestJS</li>
-          <li>REST & GraphQL APIs</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h2>Databases & ERP</h2>
-        <ul>
-          <li>MongoDB, Neo4j (Aura)</li>
-          <li>Frappe/ERPNext custom apps & print formats</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h2>Networking (background)</h2>
-        <ul>
-          <li>IPv4, OSI/TCP-IP; Routing: Static, OSPF, BGP</li>
-          <li>Switching: VLAN, RSTP, EtherChannel, HSRP</li>
-          <li>Tools: Wireshark, SolarWinds, Zabbix</li>
-        </ul>
-      </div>
+    <div class="card">
+      <h2>Development</h2>
+      <ul>
+        <li>React (hooks), HTML/CSS/JS</li>
+        <li>Node.js, NestJS</li>
+        <li>REST & GraphQL APIs</li>
+      </ul>
     </div>
 
-    <footer class="foot">© <span id="year"></span> Mahesh Palacholla</footer>
+    <div class="card">
+      <h2>Databases & ERP</h2>
+      <ul>
+        <li>MongoDB, Neo4j (Aura)</li>
+        <li>Frappe / ERPNext custom apps & print formats</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Networking (Background)</h2>
+      <ul>
+        <li>IPv4, OSI/TCP-IP</li>
+        <li>Routing: Static, OSPF, BGP</li>
+        <li>Switching: VLAN, STP/RSTP, EtherChannel, HSRP</li>
+        <li>Tools: Wireshark, SolarWinds, Zabbix</li>
+      </ul>
+    </div>
   </div>
-  <script src="script.js"></script>
+
+  <footer class="foot">© 2025 Mahesh Palacholla</footer>
 </body>
 </html>
+
